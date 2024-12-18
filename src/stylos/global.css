@@ -1,0 +1,18 @@
+/* src/stylos/global.css */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  height: 100vh; /* Asegura que el body ocupe toda la pantalla */
+  overflow: hidden; /* Prevenir desplazamiento vertical */
+}
+
+h1, h2, h3 {
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

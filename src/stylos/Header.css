@@ -1,0 +1,47 @@
+/* src/stylos/Header.css */
+
+/* Contenedor del Header */
+.header-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: visible; /* Cambiar a visible para permitir que las vistas se sobrepongan */
+}
+
+/* Imagen de fondo en el header */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/public/vistapanoramica.png') no-repeat center center/cover;
+  z-index: -1; /* Mantiene la imagen de fondo detrás del contenido */
+}
+
+/* Contenido del Header */
+.nav-content {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido del Header se muestre por encima de la imagen */
+  text-align: center;
+  padding-top: 50px; /* Ajusta la distancia superior si es necesario */
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s; /* Transición de color suave */
+}
+
+nav ul li a.active {
+  color: #ffa500; /* Resalta el enlace activo */
+}

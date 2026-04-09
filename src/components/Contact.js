@@ -40,34 +40,31 @@ function Contact() {
 
   return (
     <motion.section
-      className="min-h-screen bg-gradient-to-b from-terracotta-dark via-terracotta to-olive-dark py-16 px-4 md:px-8 flex items-center justify-center"
+      className="min-h-screen bg-cream py-20 px-6 md:px-10 flex items-center justify-center"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       <div className="w-full max-w-2xl">
-        {/* Card principal */}
         <motion.div 
-          className="bg-cream rounded-xl shadow-2xl p-8 md:p-12"
+          className="bg-white/95 border border-gold/15 rounded-2xl shadow-[0_25px_70px_-55px_rgba(0,0,0,0.5)] p-8 md:p-12"
           variants={containerVariants}
         >
-          {/* Título */}
           <motion.h2 
-            className="font-serif text-4xl md:text-5xl font-bold text-olive text-center mb-2"
+            className="font-serif text-4xl md:text-5xl font-bold text-olive-dark text-center mb-3"
             variants={itemVariants}
             custom={0}
           >
             Contáctanos
           </motion.h2>
           <motion.p 
-            className="text-center text-olive text-opacity-70 mb-10"
+            className="text-center text-dark-bg/60 mb-10"
             variants={itemVariants}
             custom={0.1}
           >
-            Estamos aquí para ti
+            Reservas, eventos o dudas: respondemos pronto.
           </motion.p>
 
-          {/* Información de contacto */}
           <motion.div 
             className="mb-10 space-y-4"
             variants={itemVariants}
@@ -76,15 +73,15 @@ function Contact() {
             <div className="flex items-start gap-4">
               <div className="w-1 h-1 bg-gold rounded-full mt-2.5 flex-shrink-0" />
               <div>
-                <p className="font-semibold text-olive">Dirección</p>
-                <p className="text-olive text-opacity-80">Sicuani, Perú, 0082</p>
+                <p className="font-semibold text-olive-dark">Dirección</p>
+                <p className="text-dark-bg/70">Sicuani, Perú, 0082</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <div className="w-1 h-1 bg-gold rounded-full mt-2.5 flex-shrink-0" />
               <div>
-                <p className="font-semibold text-olive">Teléfono</p>
-                <a href="tel:989105704" className="text-olive text-opacity-80 hover:text-olive transition-colors">
+                <p className="font-semibold text-olive-dark">Teléfono</p>
+                <a href="tel:989105704" className="text-dark-bg/70 hover:text-olive-dark transition-colors">
                   +51 989-105-704
                 </a>
               </div>
@@ -92,17 +89,16 @@ function Contact() {
             <div className="flex items-start gap-4">
               <div className="w-1 h-1 bg-gold rounded-full mt-2.5 flex-shrink-0" />
               <div>
-                <p className="font-semibold text-olive">Email</p>
-                <a href="mailto:contacto@lajuliana.com" className="text-olive text-opacity-80 hover:text-olive transition-colors">
+                <p className="font-semibold text-olive-dark">Email</p>
+                <a href="mailto:contacto@lajuliana.com" className="text-dark-bg/70 hover:text-olive-dark transition-colors">
                   contacto@lajuliana.com
                 </a>
               </div>
             </div>
           </motion.div>
 
-          <div className="border-t border-olive border-opacity-20 my-8" />
+          <div className="border-t border-gold/15 my-8" />
 
-          {/* Formulario */}
           <motion.form 
             onSubmit={handleSubmit}
             className="space-y-5 mb-10"
@@ -117,7 +113,7 @@ function Contact() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-olive border-opacity-30 rounded-lg focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold focus:ring-opacity-20 bg-white text-olive placeholder-olive placeholder-opacity-50 transition-all"
+                className="w-full px-4 py-3 border border-dark-bg/10 rounded-lg focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold focus:ring-opacity-20 bg-white text-dark-bg placeholder-dark-bg/40 transition-all"
               />
             </div>
             <div>
@@ -128,7 +124,7 @@ function Contact() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-olive border-opacity-30 rounded-lg focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold focus:ring-opacity-20 bg-white text-olive placeholder-olive placeholder-opacity-50 transition-all"
+                className="w-full px-4 py-3 border border-dark-bg/10 rounded-lg focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold focus:ring-opacity-20 bg-white text-dark-bg placeholder-dark-bg/40 transition-all"
               />
             </div>
             <div>
@@ -139,30 +135,29 @@ function Contact() {
                 onChange={handleChange}
                 required
                 rows="5"
-                className="w-full px-4 py-3 border border-olive border-opacity-30 rounded-lg focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold focus:ring-opacity-20 bg-white text-olive placeholder-olive placeholder-opacity-50 transition-all resize-none"
+                className="w-full px-4 py-3 border border-dark-bg/10 rounded-lg focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold focus:ring-opacity-20 bg-white text-dark-bg placeholder-dark-bg/40 transition-all resize-none"
               />
             </div>
             <button 
               type="submit"
-              className="w-full py-3 bg-olive hover:bg-olive-dark text-cream font-semibold font-serif text-lg rounded-lg transition-all duration-300 hover:shadow-lg active:scale-95"
+              className="w-full py-3 bg-dark-bg hover:bg-olive-dark text-cream font-serif font-semibold text-lg rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-lg shadow-olive/20"
             >
               Enviar Mensaje
             </button>
           </motion.form>
 
-          {/* Redes sociales */}
           <motion.div 
-            className="border-t border-olive border-opacity-20 pt-8 flex flex-col items-center gap-6"
+            className="border-t border-gold/15 pt-8 flex flex-col items-center gap-6"
             variants={itemVariants}
             custom={0.4}
           >
-            <p className="text-olive font-semibold">Síguenos en redes sociales</p>
+            <p className="text-dark-bg/70 font-semibold">Síguenos en redes sociales</p>
             <div className="flex gap-6">
               <a 
                 href="https://www.facebook.com/gatunosky?locale=es_LA" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-olive hover:bg-gold text-cream hover:text-olive flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-12 h-12 rounded-full bg-dark-bg hover:bg-gold text-cream hover:text-dark-bg flex items-center justify-center transition-all duration-300 hover:scale-105"
                 aria-label="Facebook"
               >
                 <FaFacebookF className="text-xl" />
@@ -171,7 +166,7 @@ function Contact() {
                 href="https://www.tiktok.com/@la.juliana26" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-olive hover:bg-gold text-cream hover:text-olive flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-12 h-12 rounded-full bg-dark-bg hover:bg-gold text-cream hover:text-dark-bg flex items-center justify-center transition-all duration-300 hover:scale-105"
                 aria-label="TikTok"
               >
                 <FaTiktok className="text-xl" />
@@ -179,7 +174,6 @@ function Contact() {
             </div>
           </motion.div>
 
-          {/* Botón de regreso */}
           <motion.div 
             className="mt-10 text-center border-t border-olive border-opacity-20 pt-8"
             variants={itemVariants}
@@ -187,7 +181,7 @@ function Contact() {
           >
             <button 
               onClick={() => navigate('/')}
-              className="px-8 py-3 bg-transparent border-2 border-olive text-olive hover:bg-olive hover:text-cream font-semibold font-serif rounded-lg transition-all duration-300 hover:scale-105"
+              className="px-8 py-3 bg-transparent border border-dark-bg text-dark-bg hover:bg-dark-bg hover:text-cream font-serif font-semibold rounded-full transition-all duration-300 hover:-translate-y-0.5"
             >
               Volver a Inicio
             </button>

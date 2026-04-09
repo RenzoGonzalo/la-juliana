@@ -1,13 +1,1 @@
-/* App Layout Styles */
-.app-container {
-  @apply flex flex-col min-h-screen bg-white;
-}
-
-.main-content {
-  @apply flex-1 w-full;
-}
-
-/* Page transitions */
-.page-transition {
-  @apply animate-fade-in;
-}
+/* Intentionally minimal: app shell uses Tailwind classes in App.js */

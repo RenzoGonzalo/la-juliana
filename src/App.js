@@ -9,9 +9,9 @@ import Contact from './components/Contact';
 function App() {
   return (
     <Router>
-      <div className="app-container">
+      <div className="min-h-screen bg-cream text-dark-bg flex flex-col">
         <Header />
-        <main className="main-content">
+        <main className="flex-1 w-full">
           <Routes>
             <Route path="/about" element={<About />} />
             <Route path="/experience" element={<Experience />} />
